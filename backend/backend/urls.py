@@ -18,7 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 
+from posts import views
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/users", views.users_list),
+    path("api/new_user", views.add_user),
+    path("api/user/<int:user_id>", views.user_action),
+    
 ]
