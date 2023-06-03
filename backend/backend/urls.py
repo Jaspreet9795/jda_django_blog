@@ -27,4 +27,9 @@ urlpatterns = [
     path("api/new_user", views.add_user),
     path("api/user/<int:user_id>", views.user_action),
     
+    path("api/posts", views.post_list),
+    path("api/new_post", views.add_post),
+    path("/ap/post/<int:post_id>", views.post_action)
+
+    
 ]
